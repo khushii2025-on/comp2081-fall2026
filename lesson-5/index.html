@@ -1,67 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Carousel | Bootstrap</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Carousel | Bootstrap</title>
 
-		<!-- Bootstrap -->
-		<!-- STEP 1: Link to the Bootstrap CSS using a Content Distribution Network (CDN), and the Bootstrap JS libraries (jQuery, popper.js, and bootstrap.js) at the bottom of the page template -->
+	<!-- Bootstrap -->
+	<!-- STEP 1: Link to the Bootstrap CSS using a CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-		<!-- STEP 11: Link to your custom styles, then open the CSS file in your code editor -->
+	<!-- STEP 11: Link to your custom styles -->
+	<link rel="stylesheet" href="css/custom.css">
+</head>
 
-	</head>
-	<body>
-		<!-- STEP 2: Build a fluid or a fixed-width container for proper alignment and padding of content-->
+<body>
+<!-- STEP 2: Build a container -->
+<div class="container">
 
-		<!-- STEP 3: Build out your basic page-level containers, HEADER, MAIN, FOOTER,and add an H1 inside the HEADER to begin the document outline -->
+	<!-- STEP 3: Build HEADER, MAIN, FOOTER -->
+	<header>
+		<h1>Carousel | Bootstrap</h1>
+	</header>
 
-				<h1>Carousel | Bootstrap</h1>
+	<main>
+		<div id="carouselCars" class="carousel slide">
 
-		<!-- STEP 4: Copy the example code from the Bootstrap documentation (use the handy "COPY" button to the top right of the code example panel), paste here, and adjust formatting -->
-		<!-- STEP 5: Replace any generic elements with more semantic sectioning or phrasing elements - add all appropriate classes to elements -->
-		<!-- STEP 6: Add a caption to each slide -->
-		<!-- STEP 7: Add a placeholder image for each slide (https://placehold.co/1200x400 is a great service for this sort of prototyping work) -->
-		<!-- STEP 8: Add a third slide, and point IMG elements to photos of cars provided in img/ directory -->
-		<!-- STEP 9a: Add the next/prev icons (add the HTML with the appropriate classes below) -->
-		<!-- STEP 9b: Change the icons - consult https://icons.getbootstrap.com/ to pick a new set of arrows using SVG and insert below -->
-		<!-- STEP 9c: Add the carousel indicators just inside the #carousel-cars, but before the .carousel-inner using the appropriate HTML -->
-		<!-- STEP 10: Let's change the position of the captions - go to STEP 11 above -->
+			<!-- Carousel indicators positioned at the top -->
+			<div class="carousel-indicators top-0 bottom-auto">
+				<button type="button" data-bs-target="#carouselCars" data-bs-slide-to="0" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselCars" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselCars" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				<button type="button" data-bs-target="#carouselCars" data-bs-slide-to="3" aria-label="Slide 4"></button>
+				<button type="button" data-bs-target="#carouselCars" data-bs-slide-to="4" class="active" aria-current="true" aria-label="Slide 5"></button>
+			</div>
 
+			<div class="carousel-inner">
 
-			<p><small>Learn more about the <a href="https://getbootstrap.com/docs/4.5/components/carousel/" title="View the Bootstrap documentation for the JavaScript Carousel Component">Bootstrap Carousel JavaScript Component</a>.</small></p>
+				<!-- Slide 1 -->
+				<figure class="carousel-item">
+					<img src="img/car1.jpg" class="d-block w-100" alt="Car 1">
+					<figcaption class="carousel-caption d-none d-sm-block position-absolute bottom-0 p-2">
+						<h5>C9R</h5>
+						<p>A really fast coupe</p>
+					</figcaption>
+				</figure>
 
-		<!-- Include Popper JS, then Bootstrap JS -->
+				<!-- Slide 2 -->
+				<figure class="carousel-item">
+					<img src="img/car2.jpg" class="d-block w-100" alt="Car 2">
+					<figcaption class="carousel-caption d-none d-sm-block position-absolute bottom-0 p-2">
+						<h5>C9</h5>
+						<p>A really quick grocery-getter</p>
+					</figcaption>
+				</figure>
 
-		<!-- STEP 14: Use custom JavaScript to control the carousel. Attach js/custom.js below -->
+				<!-- Slide 3 -->
+				<figure class="carousel-item">
+					<img src="img/car3.jpg" class="d-block w-100" alt="Car 3">
+					<figcaption class="carousel-caption d-none d-sm-block position-absolute bottom-0 p-2">
+						<h5>X9X</h5>
+						<p>A crazy fun off-roader</p>
+					</figcaption>
+				</figure>
 
-		<!-- IMAGE ATTRIBUTIONS
+				<!-- Slide 4 -->
+				<figure class="carousel-item">
+					<img src="img/car4.jpg" class="d-block w-100" alt="Car 4">
+					<figcaption class="carousel-caption d-none d-sm-block position-absolute bottom-0 p-2">
+						<h5>T9</h5>
+						<p>A powerful and stylish toy truck</p>
+					</figcaption>
+				</figure>
 
-		https://www.flickr.com/photos/songzhen/6000306219/
-		song zhen
-		automoblox c9r sport car
-		car1.jpg
+				<!-- Slide 5: Active when page loads -->
+				<figure class="carousel-item active">
+					<img src="img/car5.jpg" class="d-block w-100" alt="Car 5">
+					<figcaption class="carousel-caption d-none d-sm-block position-absolute bottom-0 p-2">
+						<h5>Adventure Car</h5>
+						<p>Ready for the next adventure</p>
+					</figcaption>
+				</figure>
 
-		https://www.flickr.com/photos/basknight/19038911481/
-		Baldwin Saintilus
-		ToyF15_0315bas
-		car2.jpg
+			</div><!-- .carousel-inner -->
 
-		https://www.flickr.com/photos/littlemonkeybutt/3144854729/
-		Katie Levesque
-		{363} automoblox
-		car3.jpg
+			<!-- Previous button -->
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselCars" data-bs-slide="prev">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+				</svg>
+				<span class="visually-hidden">Previous</span>
+			</button>
 
-		https://www.flickr.com/photos/studiocurve/287624936/
-		studio curve
-		Automoblox T9
-		car4.jpg
+			<!-- Next button -->
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselCars" data-bs-slide="next">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+				</svg>
+				<span class="visually-hidden">Next</span>
+			</button>
 
-		https://www.flickr.com/photos/alan_cys/5637805540/
-		艾倫周
-		P1000908
-		car5.jpg
+		</div><!-- #carouselCars -->
+	</main>
 
-		-->
-	</body>
+	<footer>
+		<p><small>Learn more about the
+			<a href="https://getbootstrap.com/docs/5.3/components/carousel/" title="View the Bootstrap documentation for the JavaScript Carousel Component">Bootstrap Carousel JavaScript Component</a>.
+		</small></p>
+	</footer>
+
+</div><!-- .container -->
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<!-- STEP 14: Custom JavaScript -->
+<script src="js/custom.js"></script>
+
+<!-- IMAGE ATTRIBUTIONS
+
+https://www.flickr.com/photos/songzhen/6000306219/
+song zhen
+automoblox c9r sport car
+car1.jpg
+
+https://www.flickr.com/photos/basknight/19038911481/
+Baldwin Saintilus
+ToyF15_0315bas
+car2.jpg
+
+https://www.flickr.com/photos/littlemonkeybutt/3144854729/
+Katie Levesque
+{363} automoblox
+car3.jpg
+
+https://www.flickr.com/photos/studiocurve/287624936/
+studio curve
+Automoblox T9
+car4.jpg
+
+https://www.flickr.com/photos/alan_cys/5637805540/
+艾倫周
+P1000908
+car5.jpg
+
+-->
+</body>
 </html>
